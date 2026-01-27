@@ -1,11 +1,24 @@
 <template>
     <div>
-        <InputField  :type="text" :placeholder="'Email'" :modelValue="email" v-model="email"/>
-        <InputField  :type="password" :placeholder="'Password'" :modelValue="password" v-model="password"/>
-        <button @click="login">로그인하기</button>
+        <div class="logo-container">
+            <img src="@/assets/x-logo.png" class="logo"/>
+        </div>
+        <InputField
+          :type="text" 
+          :placeholder="'Email'" 
+          :modelValue="email" 
+          v-model="email"
+        />
+        <InputField  
+        :type="password" 
+        :placeholder="'Password'" 
+        :modelValue="password" 
+        v-model="password"
+        />
+        <button class="login-button" @click="login">로그인하기</button>
         <div>
             계정이 없으신가요?
-            <span>Sign Up</span>
+            <span class="signup-button">Sign Up</span>
         </div>
     </div>
 </template>
@@ -29,6 +42,21 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.login-button {
+    border-radius: 20px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
 
+.signup-button {
+    color: aqua;
+    cursor: pointer;
+    
+}
 </style>
